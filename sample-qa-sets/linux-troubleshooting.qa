@@ -1,0 +1,7 @@
+[' What command is used to check a file system for errors?','fsck (fsck.ext3, fsck.vfat, etc...)']
+[' What file contains the list of drives that are mounted at boot?','/etc/fstab']
+[' What is /etc/inittab file? In what file is the default run level defined?','System V init examines the /etc/inittab file for an initdefault entry, which tells init whether there is a default runlevel. init is the program on Unix that spawns all other processes. It runs as a daemon and typically has PID 1.']
+['See the current run level','who -r']
+['What is a runlevel?','"Runlevel" defines the state of the machine after boot. Different runlevels are typically assigned to:single-user mode multi-user mode without network services started multi-user mode with network services started system shutdown system reboot[Reboot]']
+['What happens if there is no default run level?','System V init examines the /etc/inittab file for an :initdefault: entry, which tells init whether there is a default runlevel. If there is no default runlevel, then the user is dumped to a system console, where a runlevel must be entered manually.']
+['What programs can you use to perform system backups?','dd,rsync,tar']

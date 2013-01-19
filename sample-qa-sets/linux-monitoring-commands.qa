@@ -14,4 +14,4 @@
 ['Cmd to how activities for each available processor','mpstat']
 ['Cmd to show memory map of a process','pmap -d <pid>']
 ['Two tools for showing network statistics','netstat and ss']
-['Name the files in /proc/ for showing kernel statistics:'cpuinfo,meminfo,zoneinfo,mounts']
+['Name the files in /proc/ for showing kernel statistics,'cpuinfo,meminfo,zoneinfo,mounts']
