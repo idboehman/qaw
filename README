@@ -2,6 +2,8 @@ ABOUT//
 
 qaw (questions and answers weighted) is a simple flashcard system where the more times you answer a question correctly, the less often it shows up....
 
+*note* This was written for python 2.6+ and may not work on other versions....
+
 I've been working my way through the interview process at Facebook since yesterday when I was contacted by a recruiter.  As a result I'm scrambling to jog my memory about the aspects of linux system administration that I've not used in a while.  I also felt like brushing up on my Python.  This is the result.
 
 I've written the command line version this afternoon with a full GTK2 version to come.  It simply reads text files formatted as ['Question','Answer'] line by line and loads them into a sqlite database.  You can update question sets and mix and match them at will before you begin a quizzing session.

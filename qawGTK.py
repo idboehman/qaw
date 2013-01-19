@@ -28,40 +28,37 @@ from qawlibs import qaexceptions,qabackend
 class QAWGTK:
 
 	qaBackend = qabackend.QABackend()
-    loadedSets = []
+	loadedSets = []
 
-    def qaMain(self, widget, data=None):
-   	print "GTK Version Coming Soon!"
+	def qaMain(self, widget, data=None):
+		print "GTK Version Coming Soon!"
 
-    def delete_event(self, widget, event, data=None):
-	print "Goodbye...."
-    return False
+	def delete_event(self, widget, event, data=None):
+		print "Goodbye...."
+		return False
 
-    def destroy(self, widget, data=None):
-        gtk.main_quit()
+	def destroy(self, widget, data=None):
+		gtk.main_quit()
 
-    def __init__(self):
-        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-    
-        self.window.connect("delete_event", self.delete_event)
-        self.window.connect("destroy", self.destroy)
-        self.window.set_border_width(10)
-        
-		'''self.showQASets = gtk.combo_box_new_text()
-		for qaSet in self.qaBackend.loadCurrentTables():
-			self.showQASets.append_text(qaSet)
-		'''
-
+	def __init__(self):
+		self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+ 
+		self.window.connect("delete_event", self.delete_event)
+		self.window.connect("destroy", self.destroy)
+		
+		self.window.set_border_width(10)
+		
 		self.button = gtk.Button("Quit")
-        self.button.connect("clicked", self.qaMain, None)
-        self.button.connect_object("clicked", gtk.Widget.destroy, self.window)
-    
-        self.window.add(self.button)
-        self.button.show()
-        self.window.show()
+		self.button.connect("clicked", self.qaMain, None)
+		self.button.connect_object("clicked", gtk.Widget.destroy, self.window)
+		
+		self.window.add(self.button)
+		
+		self.button.show()
+		self.window.show()
 
-    def main(self):
-        gtk.main()
+	def main(self):
+		gtk.main()
 
 qawGUISession = QAWGTK()
 qawGUISession.main()
