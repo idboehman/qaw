@@ -120,11 +120,11 @@ class QABackend:
 		try:
 
 			dbCursor = self.dbConn.cursor()
-        	                       
-                	dropTableIfSQL = "DROP TABLE IF EXISTS "
-	                dropTableIfSQL += tableName
+								   
+			dropTableIfSQL = "DROP TABLE IF EXISTS "
+			dropTableIfSQL += tableName
 	
-        	        dbCursor.execute(dropTableIfSQL)
+			dbCursor.execute(dropTableIfSQL)
 			
 			return "Dropped: "+tableName
 		except:

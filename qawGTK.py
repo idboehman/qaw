@@ -27,12 +27,15 @@ from qawlibs import qaexceptions,qabackend
 
 class QAWGTK:
 
+	qaBackend = qabackend.QABackend()
+    loadedSets = []
+
     def qaMain(self, widget, data=None):
-        print "GTK Version Coming Soon!"
+   	print "GTK Version Coming Soon!"
 
     def delete_event(self, widget, event, data=None):
-        print "Goodbye...."
-	return False
+	print "Goodbye...."
+    return False
 
     def destroy(self, widget, data=None):
         gtk.main_quit()
@@ -44,7 +47,12 @@ class QAWGTK:
         self.window.connect("destroy", self.destroy)
         self.window.set_border_width(10)
         
-	self.button = gtk.Button("Nothing to see yet....")
+		'''self.showQASets = gtk.combo_box_new_text()
+		for qaSet in self.qaBackend.loadCurrentTables():
+			self.showQASets.append_text(qaSet)
+		'''
+
+		self.button = gtk.Button("Quit")
         self.button.connect("clicked", self.qaMain, None)
         self.button.connect_object("clicked", gtk.Widget.destroy, self.window)
     
